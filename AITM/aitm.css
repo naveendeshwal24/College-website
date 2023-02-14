@@ -1,0 +1,942 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Segoe UI;	
+	font-size: 30px;
+}
+body{
+	background-image: url(images/bodybg.png);
+	background-size: cover;
+}
+marquee{
+	color: darkred;
+}
+.header{
+	min-height: 60vh;
+	width: 100%;		
+}
+/* Adding horizontal rule to make the partision */
+.header hr{
+	border-width: 7px;
+	border-color: lightyellow;
+}
+.text-box hr{
+	border-width: 4px;
+	border-color: seagreen;
+}
+.course hr{	
+	border-width: 4px;
+	border-color: seagreen;
+}
+.campus hr{	
+	border-width: 4px;
+	border-color: seagreen;	
+}
+.facilities hr{	 
+	border-width: 4px;
+	border-color: seagreen;	
+}
+nav{
+	display: flex;
+	align-items: center;							/*to change the position of the links inside the navigation tag*/
+	padding: 2% 6%;
+	justify-content: space-between;
+	background-color:  #557A95;
+}
+nav img {
+	width: 150px;
+	border-radius: 20%;
+	border: none;
+}
+.nav-links{
+	flex: 1;   /*Flexbox is a one-dimensional layout system that we can use to create a row or a column axis layout*/
+	text-align: right;	
+}
+.nav-links ul li{
+	list-style: none;
+	display: inline-block;  /*css for menu items */
+	position: relative;
+	padding: 8px 12px;
+}
+/*.nav-links ul:hover{
+	flex: 1;	
+	display: inline-block;				 to make a 3-D effect on the navlinks text
+	text-align: right;
+	transform: rotate3d(0);
+	transform: rotate3d(1, 1, 1, 45deg);
+	transform: rotate3d(2, -1, -1, -0.2turn);
+	transform: rotate3d(0, 1, 0.5, 3.142rad);
+}*/
+.nav-links ul li a{
+	color: white;
+	text-decoration: none;
+	font-size: 13px;
+}
+.nav-links ul li::after{  
+	content: '';          /* to use the underline below the links */
+	width: 0%;
+	height: 2px;
+	background: #f44336;
+	display: block;   /* inline-block also can be used// change the moving postion of the links (inline-block to block)*/
+	margin: auto;
+	transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+	width: 100%;
+	transform: rotate3d(1, 1, 1,25deg));
+	transform: rotate3d(1, 1, 1, 45deg);
+	transform: rotate3d(2, -1, -1, -0.2turn);
+	transform: rotate3d(0, 1, 0.5, 3.142rad);
+}
+.text-box{
+	width: 100%;
+	color: black;
+	position: absolute;    /* for the content of the website and the position should be sticky to make content in between the page */
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;	
+	
+*/}
+.text-box h1{
+	/*font-size: 50px;	
+	font-family: fantasy;
+	font-weight: 400;
+	color: darkburlywood;
+	animation: animate 1.5s infinite;*/
+
+	color: white;
+  font: 50px cursive;
+  text-align: center;
+  filter: drop-shadow(.05em .05em orchid);
+  mix-blend-mode: difference;
+  animation: animate 1.5s infinite;
+}
+	@keyframes animate {					making a blinkable heading of the home page
+	0% {
+	opacity: 0;
+	}
+
+	50% {
+	opacity: 0.7;
+	}
+
+	100% {
+	opacity: 0;
+	}
+}
+
+.cta h1{
+  width: 100px;
+  height: 100px;  
+  position: relative;				
+  animation: mymove 5s infinite; /*Adding @keyframe with mymove action to move the text left to right  */
+}
+
+@keyframes mymove {
+  50%   {top: 20px; color: dimgrey ;width: 100%;}
+  100% {bottom : 90px; color: darkgray; width: 100%;}  
+  50% {top: 0px; color: dimgrey;width: 100%;}
+  100% {bottom: 0px; color: darkgrey;width: 100%;}
+}
+
+.text-box p{
+	margin: 10px 0 40px;
+	font-size: 16px;
+	text-align:center;
+	color: #FFF;
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-bottom: 20px;	
+	margin-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	
+}
+
+.hr-btn{
+display: inline-block;
+text-decoration:none;				/*for the decoration of the link button (visit to know more)on the page*/
+color: rgb(0, 127, 0);
+border: 3px solid #fff;
+border-radius: 10px;
+
+padding: 15px 34px;
+margin-bottom: 40px;
+font-size: 13px;
+background: lightblue;/*to change the background effect of color of button*/
+position: relative;
+cursor: pointer;
+}
+.hr-btn:hover{
+border: 1px solid red;      when user move cursor over the button then this style will work 
+background: red;
+color: hotred;
+transition: 0.1s;
+}
+.hr-btn:hover{
+  animation: shake 0.2s;
+  animation-iteration-count: infinite;
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }		/*To shake the media icons */
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+#btn-menu{
+	display: none;
+}
+#btn-close{
+	display: none;     /*to remove the visibility of menu and cross icon from the big screen*/
+}
+
+ /*To set the page alignment in different Screens we are using "media query as @media" */ 
+ @media(max-width :700px){
+ marquee{
+ 	display: none;
+ }
+
+
+.text-box h1{
+	font-size: 30px;	
+	margin-top: 80px;
+}
+.nav-links ul li{
+	display: block;
+}
+.nav-links{
+	position: fixed;
+	background: #f44336;    /*this is used to change the position of the menu items on the mobile view*/
+	height: 100vh;
+	width:  200px;
+	top: 0;
+	right: -200px;
+	text-align: left;
+	index: 2;    /*to set the tab index in the browser*/
+}
+#btn-menu{
+	display: block
+	cursor: pointer;
+}
+#btn-close{                                       /* allow the visibility of icons in mobile view*/
+	display: block;
+	color: darkblue;
+	margin: 50px;               
+	font-size: 30px;
+	cursor: pointer;     /*to set the cursor(circle kind of thing in mobile view)*/
+ }
+}
+
+/*----------------Course Section---------------------*/
+.course{
+	width: 80%;
+	margin: auto;
+	margin-top: 0px;
+	text-align: center;
+	padding-top: 200px;
+}
+
+h1{
+	font-size: 36px;
+	font-weight: 600;
+	color: brown;
+}
+p{
+	color: #777;   /*grey color work on white background*/
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 22px;
+	padding: 10px;
+}
+.row{
+	margin: 5%;
+	display: flex;  /*to display the content in the form of columns*/
+	justify-content: space-between;
+}
+.course-col{            /*this class is used to make three parts*/
+	flex-basis: 31%;    /*flex-basis provide three different boxes for in single column*/
+	background: #ADD8E6.;
+	border-radius: 10px;
+	margin-bottom: 5%;
+	padding: 20px 12px;
+	box-sizing: border-box;
+	transition: 0.5s; 
+	border:dotted;
+}
+h3{
+	text-align: center ;
+    font-weight: 600;
+	margin: 10px 0;
+	color: saddlebrown;
+}
+.course-col:hover{
+box-shadow: 10px 10px 60px 30px rgba(0,1000,0,0.5);
+background-color: rgba(0, 255, 0,0.5);
+transform: rotate3d(0);
+transform: rotate3d(1, 1, 1, 45deg);
+transform: rotate3d(2, -1, -1, 1turn);
+transform: rotate3d(0, 1, 0.5, 3.142rad);
+}
+
+.titleCourse img{    /*couse section for course page image*/
+	background-size: cover;
+}
+
+@media(max-width: 700px){
+
+	.course{
+		margin-top: 100px;
+	}
+	.course-col{
+		height: 100px;
+	}
+	h3{
+		padding: 0 auto;
+	}
+
+.row{
+	flex-direction: column;    /*to make the three sections in column format in mobile view*/
+}
+.row hr{
+	margin-bottom:5px;
+}
+}
+
+    /*---------campus section--------------*/
+.campus{
+	width: 80%;
+	margin: auto;
+	padding-top: 50px;
+	text-align: center;
+	
+}
+.campus-col{
+	flex-basis: 32%;
+	border-radius: 10px;
+	margin-bottom: 30px;
+	position: relative;
+	overflow: hidden;
+	transition: width 2s, height 2s, transform 2s;  /*rotating the column */
+}
+.campus-col:hover{
+	width: 300px;
+ 	height: 300px;
+  	transform: rotate(360deg);
+}
+.campus-col img{
+ width: 100%;
+ height: 100%;
+ display: block;
+}
+.layer{
+	background: rgbs(500,0,0,0.7);
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;	
+	transition: 0.5s;
+
+}
+.layer:hover{
+	background: rgba(500,0,0,0.7);
+}
+.layer h3{
+	width: 100%;
+	font-weight: 600;
+	color: #fff;
+	font-size: 19px;
+	left: 50%;
+	bottom: 0;
+	transform: translateX(-50%);
+	position: absolute;
+}
+.layer:hover h3{   /*hover on layer will move the content towards the upward direction */
+bottom: 10%;
+opacity: 1;
+}
+@media(max-width: 700px){
+	h1{
+		margin-top: 1px;
+	}
+}
+/*---------Facilities Section--------------*/
+
+.facilities{
+	width: 80%;
+	text-align: center;
+	margin: auto;
+	padding-top: 40px;
+}
+.facilities-col{
+	flex-basis: 31%;
+	border-radius: 10px;
+	margin-bottom: 10px;	
+	text-align: center;	
+	
+}
+.facilities-col:hover{
+box-shadow: 10px 10px 60px 30px rgba(0,1000,0,0.5);
+}
+.facilities-col img{
+	display: block;
+	width: 100%;
+	height: 250px;
+	border-radius:5%;
+	transition: width 2s, height 5s;
+}
+.facilities-col img:hover{
+	width: 300px;					/*making 3-d effect in website for of column */
+	height: 300px;
+}
+.facilities-col p{
+	padding: 20px;
+
+
+}
+.facilities-col h3{
+	margin-top: 17px;
+	margin-bottom: 0;
+	text-align: Center;
+}
+
+
+/*--------------Testimonial Section--------------*/
+.testimonial{
+	width: 80%;
+	text-align: center;
+	padding-top: 50px;
+	margin: auto;
+}
+.testimaonial-col{
+flex-basis: 44%;
+border-radius: 10px;
+margin-bottom: 5%;
+text-align: left;
+background: #ADD8E6;
+opacity: 0.8;
+padding: 25px;
+cursor: pointer;
+display: flex;
+}
+
+.testimaonial-col img{
+	height: 30px;
+	margin-left: 5px;
+	margin-right: 30px;
+	border-radius: 50%;
+}
+.testimaonial-col p{
+	padding: 0;
+	color: darkblue;
+	font-style: Georgia (serif);
+}
+.testimaonial-col h3{
+	text-align: left;
+	font-size: 20px;
+	color: darkolivegreen;
+}
+
+.testimaonial-col .fa{						
+	color: rgb(100, 0, 0);	
+	font-size: 20px;						/*making dark color of stars*/*/
+}
+.testimaonial-col .fa:hover{							
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }		/*To shake the star icons on hover action */
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+@media(max-width: 700px)
+{
+	.testimaonial-col img{
+	padding-left: 10px;
+	margin-right: 0px;
+	border-radius:15px;
+	}
+	.testimaonial-col p,h3,i{
+		padding-left: 5px;
+	}
+}
+/*----------------Call to Action  Section--------------*/
+.cta{
+	margin: 50px auto;
+	width: 80%;
+	padding-left: 10%;
+	text-align: left;
+	background-image: linear-gradiant(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+	background-image: url(images/backgroundimage.jpg);
+	background-position:center;
+	background-size: cover;
+	border-radius: 10px;
+	text-align: center;
+	padding: 100px 0;
+}
+.cta h1{
+	padding: 0;
+	margin-bottom: 40px;
+	color: rgba(255,255,255,0.8);
+}
+
+@media(max-width: 700px)
+{
+	/*if need to make change in contact section*/
+}
+
+/*---------------- Footer section-------------*/
+.footer{
+	width: 100%;
+	text-align: center;
+	padding: 30px 0;
+	margin-top: 10px;
+	background-color: black;
+	margin-top: 10%;
+}
+.footer h4{
+	margin-bottom: 25px;
+	font-weight: 600;
+	 color: darkolivegreen;
+}
+.footer p{
+	margin-top: 5px;
+}
+.icons .fa{
+	width: 5%;
+	color: blue;
+	margin: 0 0px;
+	height: 15px;
+	margin-top: 0px;
+	cursor:  pointer;
+
+}
+.icons .fa:hover{
+  animation: shake 0.2s;
+  animation-iteration-count: infinite;
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }		/*To shake the media icons */
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+}
+ /*adding style to social handels*/
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fa-instagram {
+  background: #911111;
+  color: white;
+}
+.fa-heart-o{
+color: #f00;
+}
+
+/*---------About US page---------------*/
+.sub-header{
+	height: 100vh;
+	width: 100%;
+	background:linear-gradiant(rgba(4,9,30,0.7),rgba(4,9,30,0.7));
+	background-position: center;
+	background-size: cover;
+	color: #fff;
+	margin-top: 0,auto;
+}
+
+.aboutus-pg {
+	background-image: url(images/aboutusbg.png);	 /*adding image on about us page along with the title*/
+	background-size: cover;
+	height: 85vh;
+	margin-bottom: 30px;
+}
+.sub-header h1{
+	margin-top: 2px auto;
+	text-align: center; 
+	color: rgb(255,255,127,0.8);
+	padding-top: 15px;
+}	
+
+.sub-footer{
+	width: 100%;
+	text-align: center;
+	padding: 30px 0;
+}
+.sub-footer h4{
+	margin-bottom: 5px;
+	margin-top: 0;
+	font-weight: 600;
+}
+.icons .fa{
+	color: #f4f4f4;
+	margin: 0 13px;
+	cursor:  pointer;
+	padding:  18px 0;
+}
+.fa-heart-o{
+color: #f00;
+}
+.about-us{
+	width: 80%;
+	margin: auto;					/*making the require changes for two colums on page */
+	padding-top: 80px;
+	padding-bottom: 50px;
+}
+.about-col{
+	flex-basis: 48%;
+	padding: 30px 2px;
+}
+.about-col img{
+	width: 100%;
+}
+.about-col h1{
+	margin-top: 0 auto;	
+	font-size: 50px;
+}
+.about-col p{
+	padding: 10px 0 25px;
+}
+@media(max-width: 700px)
+{
+	.aboutus-pg h1{
+		padding-top: 20px;
+		font-size: 100px;
+	}
+}
+
+/*---------------Blog Page----------------------*/
+.blog-content{
+	width: 80%;
+	margin: auto;
+	padding: 60px 0;
+}
+.blog-pg{
+background-image: url(images/blogbg.png);
+background-size: cover;
+height: 85%;
+margin-bottom: 75px;
+}
+.blog-pg h1{
+	padding-top:25px;
+}
+.blog-left{
+flex-basis: 50%;
+}
+
+.blog-left h2{
+	color: #777;
+	font-weight: 600;
+	margin: 10px 0;
+}
+.blog-left p{
+	color: #999;
+	padding: 0;
+}
+.blog-right{
+	flex-basis: 50%;				 /*to maintain the right section on the page*/
+	flex-direction: column;
+}
+.blog-right h3{
+	background: #f44336;
+	color: #fff;
+	padding: 7px 0;
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+.blog-right div{
+	display: flex;	
+	align-items: center;
+	justify-content: space-between;
+	color: #555;	
+	padding: 5px;
+	box box-sizing: border-box;
+	margin-bottom: 10px;
+}
+
+/*.blog-right p{
+	display: inline-block;	
+	align-items: center;
+	justify-content: right;    ulternate option, trying to remove span by using p tag
+	color: #555;
+	font-size: 20px;
+	padding: 5px;
+	box-sizing: border-box;
+}*/
+
+.comment-box{
+	border: 2px solid #ccc;
+	margin: 30px 0;
+	padding: 10px 20px;
+	border-radius: 3px;
+}
+.comment-box h3{
+	text-align: left;
+	margin-top: 5px;
+}
+
+.comment-form input,textarea{
+	width: 100%;											/*styling of form fo blog page*/
+	padding: 10px 0px;
+	margin: 10px 0px;
+	box-sizing: block;
+	align-content: center;	
+	border-radius: 10px;
+	background: #f0f0f0;
+	font-size: 20px;
+}
+
+.comment-form button{
+	margin: 0px 0;
+}
+.comment-form textarea{
+	resize: none;
+}
+.comment-form input{
+	margin-right: -20px;	
+}
+
+@media(max-width: 700px)
+{
+	.sub-header h1{
+		font-size: 24px;
+	}
+}
+
+/*-----------------Course page------------------- */
+
+.sub-header-course{
+	width: 100%;		
+	background:linear-gradiant(rgba(4,9,30,0.7),rgba(4,9,30,0.7));
+	background-position: center;
+	background-size: cover;
+	color: #fff;
+	margin-top: 0,auto;
+}
+.course-pg{
+	width: 80%;
+	margin: auto;
+	margin-top: 0px;
+	text-align: center;
+	padding-top: 10px;		
+}
+.course-sec{
+	background-image: url(images/coursebg.png);
+	background-size:cover;	
+	width: 100%;
+	height: 80vh;
+}
+.course-sec h1{			
+	color: brown;	
+	text-align: center;	
+	padding-top: 20px;
+}
+.course-header p{
+	color: #777;   /*grey color work on white background*/
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 22px;
+	padding: 10px;
+}
+.row-course-pg{
+	margin: 5%;
+	display: flex;  /*to display the content in the form of columns*/
+	justify-content: space-between;	
+}
+.course-col-pg{            /*this class is used to make three parts*/
+	flex-basis: 31%;    /*flex-basis provide three different boxes for in single column*/
+	background: #lightblue;
+	border-radius: 10px;
+	margin-bottom: 5%;
+	padding: 20px 12px;
+	box-sizing: border-box;
+	border: dashed;
+	transition: 0.5s; 
+}
+.course-col-pg h3{
+	text-align: center ;
+  font-weight: 600;
+	margin: 10px 0;
+	color: saddlebrown;
+}
+.course-col-pg:hover{
+box-shadow: 10px 10px 60px 30px rgba(1000,127,0);
+background-color: rgba(0, 255, 0,0.5);
+transform: rotate3d(1, 1, 1,25deg);
+transform: rotate3d(1, 1, 1, 45deg);
+transform: rotate3d(2, -1, -1, 0.5turn);
+transform: rotate3d(0, 1, 0.5, 3.142rad);
+
+}
+
+
+/*-------------Contact Page --------------*/
+.location{
+	width: 80%;
+	margin: auto;
+	padding: 20px 0;
+}
+.location iframe{ 
+	width: 100%;
+}
+.contact-us{
+	width: 80%;
+	margin: auto;
+}
+.maphead-class{
+	text-align: center;
+	color: rgba(0,255,0,1);
+	background-color: lightcyan;
+}
+.contact-col{
+	flex-basis: 48%;
+	margin-bottom: 30px;
+}
+.contact-col i,h5,p{
+	font-size: 20px;
+	color: #999;
+}
+
+.contact-col div .fa{
+	font-size: 20px;
+	color: #f44336;
+	margin: 10px;
+	margin-right: 20px;
+}
+.contact-col div p{
+	font-size: 10px;
+	margin-bottom: 5px;
+	color: #%555;
+}
+.media-file iframe{
+	width: 100%;
+	
+	border-radius: 20px;
+	border-color: #A52A2A;
+	padding-left: 0;
+	background-color: lightcyan;
+}
+.contact-col input,textarea{
+	display: flex;
+	width: 100%;
+	padding: 10px;
+	font-size: 20px;
+	margin-bottom: 17px;
+	outline: none;
+	border: 1px solid #A52A2A;
+	box-sizing: border-box;
+	reszie: none;
+	border-radius: 5px;
+}
+.contact-col textarea{
+	resize: none;
+}
+
+
+/*----------------pop-up chat section-----------*/
+
+.btn-open-chat-popup{
+	background-color: #20B2AA;
+	color: white;
+	padding: 16px 16px;
+	border: none;
+	cursor: pointer;
+	opacity: 0.7;
+	position: fixed;
+	bottom: 23px;
+	right: 50px;
+	width: 200px;
+	border-radius:5px;
+  }
+ .chat-popup {
+  display: none;			 /*chat box will be hidden by default*/
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #20B2AA;
+  z-index: 9;
+  border-radius: 2%;
+}
+.form-container{
+  max-width: 300px;					/*making the style of form of chat box*/
+  padding: 10px;
+  background-color:#20B2AA;
+  border-radius: 5px;
+}
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+.form-container textarea:focus{
+  background-color: #ddd;				
+  outline: solid;  
+}
+.form-container textarea{
+	resize: none;						   /*disable the resize propety of textarea*/
+}
+.form-container  btn-save-popup,btn-close-popup{
+  background-color:darkred;        
+}
+ /*-----------------------Paging Css---------------*/
+
+.pagination{
+	display: inline-block;
+	margin-bottom: -50px;
+	}
+.paginationpg{
+	text-align: center;
+	}
+ .pagination a {
+  color: #fff;
+  float: left;
+  padding: 8px 10px;
+  text-decoration: none;
+  font-size: 25px; 
+}
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+ 

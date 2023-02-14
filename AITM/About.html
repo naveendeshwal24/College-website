@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		AITM Official Website
+	</title>
+	<link rel="stylesheet" type="text/css" href="aitm.css">
+
+	<!-- for adding icons in the footer section for social connection -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
+</head>
+<body>
+	   <!-- Menu and header section of the page -->
+	<section class="sub-header">	
+		
+			<nav>
+			<a href="Home.html"><img src="images\AEI_Logo.png" alt="logo"></a>  <!-- to create the logo in navigation bar -->
+			<div class="nav-links" >
+				<i class="fa fa-times" id="btn-close" onclick="closemenu()">Cls</i> <!-- to provide the close icon in mobile view -->
+				<ul>					
+					<li> <a href="Home.html"> HOME</a></li>
+					<li> <a href="About.html"> ABOUT</a></li>
+					<li> <a href="Course.html"> COURSES</a></li>
+					<li> <a href="Blog.html"> BLOG</a></li>
+					<li> <a href="Contact.html"> CONTACT</a>
+					</li>
+				</ul>	
+			</div>	
+				<i class="fa fa-bars" id="btn-menu" onclick="showmenu()">M</i>
+		</nav>	
+		<hr>	
+		<div class="aboutus-pg">
+		<h1>About Us</h1>					
+		</div>
+	</section>
+	<section>
+		<div class="about-us">
+			<div class="about-col">
+				<h1>We are the Best here! </h1>
+				<p>Advanced Institute of Technology and Management (AITM) was established in the year 2006 and is the first engineering college in Palwal District.  It is a premier institute of northern India imparting quality education in various courses like B. Tech, M. Tech, MBA, BBA, MCA and BCA.  AITM is approved by AICTE, MHRD (Govt. of India) and DTE (Haryana) and affiliated to J.C. Bose University of Science & Technology, YMCA, Faridabad. This institute is highly acclaimed in academic circles and by the students and the general public for its contribution to the society in producing top class professionals in the fields of engineering, technology and management. AITM has the most modern infrastructure, well-equipped laboratories having sophisticated instruments, air conditioned library, highly experienced and dedicated faculty members.  AITM is proud to provide an atmosphere conducive to learning and is always bustling with academic and extra-curricular activities.</p>
+				<a href="https://www.advanced.edu.in/" class="hr-btn">Explore Now</a>
+			</div>
+			<div class="about-col">
+			</div>
+		</div>		
+	</section>
+	<div class="paginationpg">
+		<div class="pagination">	  
+		 <a href="Home.html">&laquo;</a>  
+		  <a href="Home.html">1</a>
+		  <a href="About.html">2</a>
+		  <a href="Course.html">3</a>	
+		  <a href="Blog.html">4</a>
+		  <a href="Contact.html">5</a>	
+		  <a href="Course.html">&raquo;</a> 	 	 
+		</div>
+</div>
+
+<!-------- Footer section------ -->
+
+	<section class="footer">
+		<h4> <u>ABOUT US</u></h4>
+		<p>We offer Technical and non-Technical courses and provide best faculties for different courses. 
+			</p>
+		<div class="icons">					<!-- Social Contact -->
+			<a class="fa fa-facebook" href="https://www.facebook.com"></a> 
+			<a class="fa fa-twitter" href="https://twitter.com/aitm_palwal"></a>
+			<a class="fa fa-instagram" href="https://instagram.com"></a>
+			<a class="fa fa-linkedin" href="https://linkedin.com"></a>
+		</div>
+		<p>Made by<i class="fa fa-heart-o"></i>Naveen Deshwal</p>
+	</section>
+	
+<!-- ---------------------- chat section------------------- -->
+
+
+ <button class="btn-open-chat-popup" onclick="openbutton()">Chat ...</button>
+
+ <div class="chat-popup" id="chat-form">
+ 	<form action="" class="form-container">
+ 		<h1>Connect With Us</h1>
+ 		<label for="msg">
+ 			<textarea placeholder="Message here..." rows="8" cols="15" name="msg" required></textarea>
+ 		</label>
+ 		<button type="submit" class="btn-save-popup" onclick="saveform()">Send</button>
+ 		<button class="btn-close-popup" onclick="closebutton()">Cancel</button>
+ 	</form>
+ </div>
+<script type="text/javascript" src="aitm.js"></script>
+</body>
+</html>

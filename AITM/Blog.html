@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		AITM Official Website
+	</title>
+	<link rel="stylesheet" type="text/css" href="aitm.css">
+
+	<!-- for adding icons in the footer section for social connection -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">		
+	
+</head>
+<body>
+	   <!-- Menu and header section of the page -->
+	<section class="sub-header">		
+		<nav>
+			<a href="Home.html"><img src="images\AEI_Logo.png" alt="logo"></a>  <!-- to create the logo in navigation bar -->
+			<div class="nav-links" >
+				<i class="fa fa-times" id="btn-close" onclick="closemenu()">Cls</i> <!-- to provide the close icon in mobile view -->
+				<ul>					
+					<li> <a href="Home.html"> HOME</a></li>
+					<li> <a href="About.html"> ABOUT</a></li>
+					<li> <a href="Course.html"> COURSES</a></li>
+					<li> <a href="Blog.html"> BLOG</a></li>
+					<li> <a href="Contact.html"> CONTACT</a>
+					</li>
+				</ul>	
+			</div>	
+				<i class="fa fa-bars" id="btn-menu" onclick="showmenu()">M</i>
+		</nav>
+		<div class="blog-pg">
+		<h1>Our Certifications & Programs</h1>			
+	</div>
+	</section>
+<!-- ---------------Blog page Content ------------------ -->
+	<section class="blog-content">
+		<div class="blog-left">			
+			<h2>Online Certificatin & Programs</h2>
+			<p>Advanced Institute of Technology and Management (AITM), established in 2006 is the first engineering college in Palwal District. The institute is approved by AICTE and DTE and affiliated to J.C. Bose University of Science & Technology, YMCA, Faridabad. AITM offers courses like BTech, BBA, BCA, MTech, MBA and MCA at the undergraduate and the postgraduate level.Moreover, the institution has modern infrastructure with well-equipped laboratories having sophisticated instruments and highly experienced and dedicated faculty members. The training and placement cell of AITM has tie ups with numerous management firms. The highest salary package that a student gets on completion of courses from AITM is around INR 7.2 LPA.<br>			
+		</p>		
+		<div class="comment-box">
+			<h3>Leave a Comment</h3>
+			<form class="comment-form" onsubmit="saveBlogFormdata()" method="Post" >
+			<div class="input-section">
+				<input id="name"type="text" placeholder="enter name">
+				<input id="email"type="email" placeholder="enter email">
+			</div>
+			<textarea id="message" rows="4" cols="100" placeholder="Message....."></textarea>
+			<button type="submit" class="hr-btn red-btn">Post Comment</button>
+			</form>
+
+		</div>
+		</div>
+		<div class="blog-right">
+			<h3>Post Categories</h3>
+			<div>
+				<span>Teacher</span>
+				<span>15</span>
+			</div>
+			<div>
+				<span>Developer</span>
+				<span>20</span>
+			</div>
+			<div>
+				<span>Tester</span>
+				<span>10</span>
+			</div>
+			<div>
+				<span>Supervisor</span>
+				<span>5</span>
+			</div>
+		</div>				
+	</section>
+	<div class="paginationpg">
+		<div class="pagination">	  
+		  <a href="Course.html">&laquo;</a>  
+		  <a href="Home.html">1</a>
+		  <a href="About.html">2</a>
+		  <a href="Course.html">3</a>	
+		  <a href="Blog.html">4</a>
+		  <a href="Contact.html">5</a>	
+		  <a href="Contact.html">&raquo;</a> 	 	 
+		</div>
+</div>
+<!-------- Footer section------ -->
+	<section class="footer">
+		<h4> <u>ABOUT US</u></h4>
+		<p>We offer Technical and non-Technical courses and provide best faculties for different courses. 
+			</p>
+		<div class="icons">					<!-- Social Contact -->
+			<a class="fa fa-facebook" href="https://www.facebook.com"></a> 
+			<a class="fa fa-twitter" href="https://twitter.com/aitm_palwal"></a>
+			<a class="fa fa-instagram" href="https://instagram.com"></a>
+			<a class="fa fa-linkedin" href="https://linkedin.com"></a>
+		</div>
+		<p>Made by<i class="fa fa-heart-o"></i>Naveen Deshwal</p>
+	</section>
+
+<!-- ---------------------- chat section------------------- -->
+
+ <button class="btn-open-chat-popup" onclick="openbutton()">Chat ...</button>
+
+ <div class="chat-popup" id="chat-form">
+ 	<form action="" class="form-container">
+ 		<h1>Connect With Us</h1>
+ 		<label for="Chat_message">
+ 			<textarea placeholder="Message here..." rows="8" cols="15" name="Chat_message" required></textarea>
+ 		</label>
+ 		<button type="submit" class="btn-save-popup" onclick="saveform()">Send</button>
+ 		<button class="btn-close-popup" onclick="closebutton()">Cancel</button>
+ 	</form>
+ </div>
+<script type="text/javascript" src="aitm.js"></script>
+</body>
+</html>
