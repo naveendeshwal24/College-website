@@ -1,6 +1,6 @@
 // function for getting desiplay/ cancel the popup chat
 function openbutton(){
- 		document.getElementById("chat-form").style.display = "block";
+ 		document.getElementById("chat-form").style.display= "block";
  	}
  function closebutton(){
  		document.getElementById("chat-form").style.display = "none";
