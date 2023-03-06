@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		AITM Official Website
+	</title>
+	<link rel="stylesheet" type="text/css" href="../styles/aitm.css">
+
+	<!-- for adding icons in the footer section for social connection -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
+	
+</head>
+<body>
+	   <!-- Menu and header section of the page -->
+	<section class="sub-header-course">		
+		<nav>
+			<a href="Home.html"><img src="../images\AEI_Logo.png" alt="logo"></a>  <!-- to create the logo in navigation bar -->
+			<div class="nav-links" >
+				<i class="fa fa-times" id="btn-close" onclick="closemenu()">Cls</i> <!-- to provide the close icon in mobile view -->
+				<ul>					
+					<li> <a href="Home.html"> HOME</a></li>
+					<li> <a href="About.html"> ABOUT</a></li>
+					<li> <a href="Course.html"> COURSES</a></li>
+					<li> <a href="Blog.html"> BLOG</a></li>
+					<li> <a href="Contact.html"> CONTACT</a>
+					</li>
+				</ul>	
+			</div>	
+				<i class="fa fa-bars" id="btn-menu" onclick="showmenu()">M</i>
+		</nav>
+		<div class="course-sec">
+			<h1>Courses We Offer</h1>
+		</div>
+	</section>
+	<!-- ---------------Course Section--------------- -->
+
+	<!-- Course section  -->
+	<section class="course-pg">		
+		<div class="row-course-pg">
+			<div class="course-col-pg">
+				<h3>Graduation</h3>
+				<p>BCA(Data Science),BCA,BBA,BBA (Digital Marketing),
+						B.Tech (Computer Science & Engineering),
+						B.Tech (Information Technology),
+						B.Tech (Electronics & Communication Engineering),
+						B.Tech (Mechanical Engineering),
+						B.Tech (Civil Engineering)
+				</p>
+			</div>
+			<div class="course-col-pg">
+				<h3>Post Graduation</h3>
+				<p>MCA ,MBA ,M.Tech (Computer Science & Engineering),
+					M.Tech (Electronics & Communication Engineering),
+					M.Tech (Mechanical Engineering)
+				</p>
+			</div>
+
+			<div class="course-col-pg">
+				<h3>Vocational</h3>
+				<p>B.Voc<br>
+					C.Voc<br>
+					D.Voc
+				</p>
+			</div>			
+		</div>
+	</section>
+
+<!-- -------------------Facilities Section---------------- -->
+	<!-- Facilities Section -->
+	<section class="facilities">		
+		<h1>Our Facilities</h1>
+		<p>We try to give our best to our Students and Faculties and our Guests in term of our Facilities.</p>	
+		<div class="row">
+			<div class="facilities-col">
+				<img src="..\images\library2.jpg" alt="Library">
+				<h3>Library</h3>
+				<p>We have different-different library facilities in different campuses and have all kind of books in them regarding the different subjects as per the requirements.We provide our best.</p>
+			</div>
+			<div class="facilities-col">
+				<img src="..\images\playground.png" alt="playground">
+				<h3>Sports</h3>
+				<p>We have separate ground along with the different facilities for each campus.All kind of games can be played over there and every ground is neat and clean.</p>
+			</div>
+			<div class="facilities-col">
+				<img src="..\images\cafeteria.png" alt="Cafe">
+				<h3>Best Quality Food</h3>
+				<p>We have a common Cafeteria/Canteen for all branches and students and faculties and Guests with all kind of food and fast food. We also have separate pantry for the students </p>
+			</div>				
+		</div>					
+	</section>
+	<div class="paginationpg">
+		<div class="pagination">	  
+		 <a href="About.html">&laquo;</a>  
+		  <a href="Home.html">1</a>
+		  <a href="About.html">2</a>
+		  <a href="Course.html">3</a>	
+		  <a href="Blog.html">4</a>
+		  <a href="Contact.html">5</a>	
+		  <a href="Blog.html">&raquo;</a> 	 	 
+		</div>
+</div>
+
+<!-------- Footer section------ -->
+<section class="footer">
+		<h4> <u>ABOUT US</u></h4>
+		<p>We offer Technical and non-Technical courses and provide best faculties for different courses. 
+			</p>
+		<div class="icons">					<!-- Social Contact -->
+			<a class="fa fa-facebook" href="https://www.facebook.com"></a> 
+			<a class="fa fa-twitter" href="https://twitter.com/aitm_palwal"></a>
+			<a class="fa fa-instagram" href="https://instagram.com"></a>
+			<a class="fa fa-linkedin" href="https://linkedin.com"></a>
+		</div>
+		<p>Made by<i class="fa fa-heart-o"></i>Naveen Deshwal</p>
+	</section>
+	
+<!-- ---------------------- chat section------------------- -->
+
+
+ <button class="btn-open-chat-popup" onclick="openbutton()">Chat ...</button>
+
+ <div class="chat-popup" id="chat-form">
+ 	<form action="ChatBoxDB.php" class="form-container" method="POST">
+ 		<h1>Connect With Us</h1>
+ 		<label for="msg">
+ 			<textarea name="Message" placeholder="Message here..." rows="8" cols="15" required></textarea>
+ 		</label>
+ 		<button type="submit" name="submit" id="btn-save" class="btn-save-popup">Send</button>
+ 		<button class="btn-close-popup" id="btn-cancel" onclick="closebutton()">Cancel</button>
+ 	</form>
+ </div>
+<script type="text/javascript" src="../script/aitm.js"></script>
+</body>
+</html>
